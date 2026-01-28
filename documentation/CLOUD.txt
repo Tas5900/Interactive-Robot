@@ -1,0 +1,29 @@
+ESPuppy – Cloud Session Logging
+
+====================================================
+Overview
+====================================================
+
+ESPuppy supports optional session-based logging using Adafruit IO.
+
+====================================================
+Session Behavior
+====================================================
+
+When session = 1:
+- Emotional states are logged.
+- Touch events are recorded.
+- Interaction counters are updated.
+
+When session = 0:
+- Logging stops.
+- Session summary is published.
+
+====================================================
+Offline Behavior
+====================================================
+
+If cloud connectivity is unavailable:
+- The robot continues operating locally.
+- Data is sent once connection is restored.
+

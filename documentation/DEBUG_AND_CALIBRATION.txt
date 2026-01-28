@@ -1,1 +1,56 @@
+ESPuppy – Debug Messages & Calibration
 
+====================================================
+Debug Output
+====================================================
+
+The system prints debug and status messages to the Serial Monitor
+(baud rate: 115200).
+
+Common messages include:
+
+"[SESSION] START / STOP"
+- Indicates Adafruit IO session state change.
+
+"[STATE] Changing from X -> Y"
+- Emotional state transition.
+
+"[SD] SD init FAILED!"
+- SD card not detected or initialization failed.
+
+"[AUDIO] File NOT FOUND on SD"
+- MP3 file missing from SD card.
+
+"[EAR] ledcAttachChannel FAILED"
+"[TAIL] ledcAttachChannel FAILED"
+- PWM channel attachment failed.
+
+"[OLED] Left/Right display init FAILED!"
+- OLED display initialization failure.
+
+If no messages appear:
+- Check baud rate (115200)
+- Verify USB cable and board selection
+
+====================================================
+Calibration Instructions
+====================================================
+
+Touch Sensors Calibration:
+- Parameters:
+  HEAD_THRESHOLD
+  TAIL_THRESHOLD
+- Calibration steps:
+  1. Open Serial Monitor.
+  2. Observe raw values when untouched.
+  3. Touch sensor and observe new values.
+  4. Set threshold slightly above touched value.
+  5. Recompile and upload code.
+
+Servo Calibration:
+- Servo angle range: 30°–150°
+- Use external 5V power supply to avoid jitter.
+
+Motor Calibration:
+- Motor speed and duration values are hard-coded.
+- Adjust constants if movement is too fast or too slow.

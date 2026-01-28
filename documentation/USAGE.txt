@@ -1,0 +1,54 @@
+ESPuppy – User Guide
+
+====================================================
+General Usage Instructions
+====================================================
+
+ESPuppy is an interactive robotic system based on ESP32.
+The robot reacts to touch interactions on the head and tail
+and transitions between emotional states that affect:
+
+- Motor movement
+- Tail and ear servo behavior
+- Eye animations on OLED displays
+- Audio playback
+- Cloud logging via Adafruit IO (optional)
+
+Basic operation steps:
+1. Power the ESP32 and external components (servos, motors).
+2. Ensure WiFi connectivity is available.
+3. (Optional) Enable session logging from Adafruit IO dashboard.
+4. Interact with the robot using head and tail touch sensors.
+5. Observe emotional responses (movement, sound, animation).
+
+====================================================
+Emotional States & Behavior
+====================================================
+
+NEUTRAL:
+- Default idle state.
+- After inactivity, transitions to SLEEPY.
+
+HAPPY_SHORT / HAPPY_MEDIUM / HAPPY_LONG:
+- Triggered by head petting duration.
+- Robot moves forward or turns.
+- Tail performs smooth side-to-side motion.
+- Positive sound and eye animation.
+
+ANNOYED:
+- Triggered by tail touch or negative interaction.
+- Robot moves backward slightly.
+
+ANGRY:
+- Triggered by repeated negative interaction.
+- Robot moves backward aggressively.
+- Ears move up, tail moves downward.
+
+CONFUSED:
+- Triggered by specific timing of interactions.
+- Robot displays question mark animation.
+
+SLEEPY:
+- Triggered by inactivity.
+- Eyes close and "Zzz" animation appears.
+- Tail moves upward.
