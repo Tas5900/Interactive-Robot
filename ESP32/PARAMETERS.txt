@@ -1,0 +1,192 @@
+PARAMETERS – Project Configuration (Hard-Coded)
+
+====================================================
+1. Network & Cloud Parameters
+====================================================
+
+WIFI_SSID
+- Description: WiFi network name used by the ESP32.
+- Location: SECRETS.h
+
+WIFI_PASS
+- Description: WiFi password.
+- Location: SECRETS.h
+
+AIO_USERNAME
+- Description: Adafruit IO username.
+- Location: SECRETS.h
+
+AIO_KEY
+- Description: Adafruit IO API key used for cloud communication.
+- Location: SECRETS.h
+
+
+====================================================
+2. Touch Sensors Parameters
+====================================================
+
+HEAD_TOUCH_PIN
+- Description: GPIO pin for head touch sensor (GPIO32).
+
+TAIL_TOUCH_PIN
+- Description: GPIO pin for tail touch sensor (GPIO33).
+
+HEAD_THRESHOLD
+- Description: Threshold below which head touch is detected.
+
+TAIL_THRESHOLD
+- Description: Threshold below which tail touch is detected.
+
+DEBOUNCE_MS
+- Description: Debounce time (milliseconds) for stabilizing touch input.
+
+
+====================================================
+3. State Timing Parameters
+====================================================
+
+ANNOYED_CONFUSED_WINDOW
+- Description: Time window (ms) in which petting the head while annoyed can cause a transition to CONFUSED.
+
+SLEEPY_TIMEOUT
+- Description: Time without interaction (ms) before transitioning from NEUTRAL to SLEEPY.
+
+RESET_TIMEOUT
+- Description: Time (ms) after emotional states before returning to NEUTRAL.
+
+
+====================================================
+4. Pet Interaction Duration Parameters
+====================================================
+
+PET_IGNORE_MAX
+- Description: Minimum touch duration (ms) to be considered a valid interaction.
+
+PET_SHORT_MAX
+- Description: Maximum duration for a short pet.
+
+PET_MEDIUM_MAX
+- Description: Maximum duration for a medium pet.
+
+
+====================================================
+5. Motor Control Parameters (L298N)
+====================================================
+
+ENA, ENB
+- Description: Enable pins for motor driver.
+
+IN1, IN2, IN3, IN4
+- Description: Direction control pins for motors.
+
+HAPPY_SHORT_SPEED
+- Description: Forward speed during HAPPY_SHORT state.
+
+HAPPY_MEDIUM_SPEED
+- Description: Forward speed during HAPPY_MEDIUM state.
+
+HAPPY_LONG_TURN_SPEED
+- Description: Turning speed during HAPPY_LONG state.
+
+ANNOYED_BACK_SPEED
+- Description: Backward speed during ANNOYED state.
+
+ANGRY_BACK_SPEED
+- Description: Backward speed during ANGRY state.
+
+HAPPY_SHORT_MOVE_MS
+- Description: Movement duration (ms) for HAPPY_SHORT.
+
+HAPPY_MEDIUM_MOVE_MS
+- Description: Movement duration (ms) for HAPPY_MEDIUM.
+
+HAPPY_LONG_TURN_MS
+- Description: Turning duration (ms) for HAPPY_LONG.
+
+ANNOYED_MOVE_MS
+- Description: Backward movement duration (ms) for ANNOYED.
+
+ANGRY_MOVE_MS
+- Description: Backward movement duration (ms) for ANGRY.
+
+
+====================================================
+6. Servo Parameters
+====================================================
+
+SERVO_FREQ_HZ
+- Description: PWM frequency for all servos (50Hz).
+
+SERVO_RES_BITS
+- Description: PWM resolution in bits.
+
+SERVO_MIN_US
+- Description: Minimum servo pulse width.
+
+SERVO_MAX_US
+- Description: Maximum servo pulse width.
+
+TAIL_SIDE_PIN
+- Description: GPIO pin for sideways tail servo (GPIO12).
+
+TAIL_UP_PIN
+- Description: GPIO pin for up/down tail servo (GPIO15).
+
+TAIL_CENTER
+- Description: Neutral tail angle (90 degrees).
+
+TAIL_MIN
+- Description: Minimum tail angle (30 degrees).
+
+TAIL_MAX
+- Description: Maximum tail angle (150 degrees).
+
+TAIL_SWEEP_TICK_MS
+- Description: Time interval (ms) between tail sweep updates.
+
+TAIL_SWEEP_STEP_DEG
+- Description: Angle step per sweep update.
+
+EAR_PIN
+- Description: GPIO pin for ear servo (GPIO2).
+
+EAR_CH
+- Description: PWM channel for ear servo.
+
+
+====================================================
+7. Eye Animation Parameters
+====================================================
+
+EYE_RENDER_INTERVAL_MS
+- Description: Refresh rate (ms) for eye animation rendering.
+
+moveInterval
+- Description: Interval between pupil movements.
+
+blinkInterval
+- Description: Interval between eye blinks.
+
+ZZZ_TICK_MS
+- Description: Update interval for sleep (Zzz) animation.
+
+CONFUSED_TICK_MS
+- Description: Update interval for confused animation.
+
+
+====================================================
+8. Audio File Parameters
+====================================================
+
+FILE_HAPPY_SHORT
+FILE_HAPPY_MEDIUM
+FILE_HAPPY_LONG
+FILE_ANNOYED
+FILE_ANGRY
+FILE_SLEEPY
+FILE_CONFUSED
+
+- Description: File paths for MP3 audio files stored on the SD card.
+- Each file corresponds to a specific emotional state.
+
+
